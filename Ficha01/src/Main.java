@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main{
     /* -> Exercicio 7
     public static float perimetroRetangulo(float width, float height){
