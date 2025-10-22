@@ -1,3 +1,7 @@
+import org.w3c.dom.ls.LSOutput;
+import pt.uma.tpsi.ad.utils.MatrixUtilities;
+import pt.uma.tpsi.ad.utils.CharacterDrawingUtilities;
+
 public class Main{
     public static void main(String[] args) {
 
@@ -19,6 +23,33 @@ public class Main{
             System.out.println(msg);
         }
 
-    }
+        int[][] matrix = {
+                {1, 2, 3},
+                {9, 2, 3},
+                {8, 7, 3},
+        };
+        int[][] matrix2 = {
+                {1, 4},
+                {3, 4, 5},
+                {1, 2}
+        };
+        int[][] matrixToSum = {
+                {1, 1, 1},
+                {1, 1, 1},
+                {1, 1, 1},
+        };
 
+        MatrixUtilities.show(matrix);
+        System.out.println("É matriz: " + MatrixUtilities.isMatrix(matrix2));
+        System.out.println("É identidade: " + MatrixUtilities.isIdentity(matrix));
+        System.out.println("Multiplicaçao: \n");
+        MatrixUtilities.show(MatrixUtilities.multiplyBy(matrix2, 4));
+        System.out.println(MatrixUtilities.areCompatibleForSum(matrix, matrix2));
+        System.out.println("Soma: \n");
+        MatrixUtilities.show(MatrixUtilities.sumOf(matrix, matrixToSum));
+        //CharacterDrawingUtilities.drawHorizontalSegmentWith(5, '*');
+        //CharacterDrawingUtilities.drawFilledRectangleWith(5, 5, '*');
+        CharacterDrawingUtilities.drawEmptyRectangleWith(5, 5, '*');
+
+    }
 }
