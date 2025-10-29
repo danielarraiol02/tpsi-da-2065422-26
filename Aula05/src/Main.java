@@ -13,5 +13,6 @@ public class Main {
         System.out.println(t1.getArea());
         Rectangle ret = new Rectangle(p3,10,10);
         System.out.println(ret.contains(p3));
+
         }
     }
